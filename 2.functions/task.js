@@ -14,6 +14,9 @@ function summElementsWorker(...arr) {
 }
 
 function differenceMaxMinWorker(...arr) {
+  if (arr === undefined || arr.length == 0) {
+    return 0;
+  }
   return Math.max(...arr) - Math.min(...arr);
 }
 
@@ -25,6 +28,9 @@ function differenceEvenOddWorker(...arr) {
 }
 
 function averageEvenElementsWorker(...arr) {
+  if (arr === undefined || arr.length == 0) {
+    return 0;
+  }
   let sumEvenElement = 0;
   let countEvenElement = 0;
   arr.forEach(x => {
@@ -42,7 +48,5 @@ function makeWork(arrOfArr, func) {
   return Math.max(...resultArr);
 }
 
-const arr = [
-  [10, 10, 11, 20, 10], [67, 10, 2, 39, 88], [72, 75, 51, 87, 43],
-  [30, 41, 55, 96, 62]
-];
+
+console.log(averageEvenElementsWorker());
