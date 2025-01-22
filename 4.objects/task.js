@@ -15,6 +15,7 @@ Student.prototype.setSubject =
   if (this.isExcuded == true) {
     retrurn;
   }
+
   this.marks.push(...marks);
 }
 
