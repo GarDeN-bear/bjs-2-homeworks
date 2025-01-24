@@ -18,17 +18,15 @@ Student.prototype.addMarks = function(...marks) {
 };
 
 Student.prototype.getAverage = function() {
-  let avg = 0;
   if (!this.hasOwnProperty('marks')) {
-    return avg;
+    return 0;
   }
 
-  if (this.marks.length == 0) {
-    return avg;
+  if (this.marks.length === 0) {
+    return 0;
   }
 
-  avg = this.marks.reduce((accum, val) => accum + val, 0) / this.marks.length;
-  return avg;
+  return this.marks.reduce((accum, val) => accum + val, 0) / this.marks.length;
 };
 
 Student.prototype.exclude = function(reason) {
