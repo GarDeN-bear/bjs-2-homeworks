@@ -20,8 +20,10 @@ class AlarmClock {
     }
 
     getCurrentFormattedTime() {
-        let date = new Date();
-        return date.getHours() + ":" + date.getMinutes();
+        return new Date().toLocaleTimeString("ru-Ru", {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
     }
     
     start() {
